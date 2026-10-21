@@ -1,0 +1,52 @@
+name: Ticket
+description: Un'attività del progetto, come in uno sprint reale
+title: "[Sett. X] "
+labels: ["ticket"]
+body:
+  - type: textarea
+    id: contesto
+    attributes:
+      label: Contesto
+      description: Perché serve? Che problema risolve per chi usa il sito?
+    validations:
+      required: true
+  - type: textarea
+    id: obiettivo
+    attributes:
+      label: Cosa fare
+      description: Il risultato atteso, non la soluzione passo passo.
+    validations:
+      required: true
+  - type: textarea
+    id: criteri
+    attributes:
+      label: Criteri di accettazione
+      description: Condizioni verificabili per considerarlo fatto.
+      value: |
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+  - type: textarea
+    id: risorse
+    attributes:
+      label: Risorse
+      description: Documentazione o articoli utili.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area del ciclo di vita
+      options:
+        - design
+        - frontend
+        - backend
+        - database
+        - test
+        - ci-cd
+        - deploy
+        - monitoraggio
+        - seo
+        - performance
+        - accessibilità
+    validations:
+      required: true
