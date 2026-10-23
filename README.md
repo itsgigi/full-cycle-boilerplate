@@ -33,21 +33,6 @@ Chi lavora su progetti di gruppo (all'ITS, in un bootcamp, in tirocinio) ha diff
 - Vitest e Testing Library per i test unitari, Playwright per i test end-to-end
 - GitHub Actions per la CI, Vercel per il deploy
 
-## Stato del progetto
-
-| Sprint | Obiettivo                                      | Stato    |
-| ------ | ---------------------------------------------- | -------- |
-| 1      | Fondamenta, design system, home e primo deploy | In corso |
-| 2      | Primo caso studio scritto a mano               | Da fare  |
-| 3      | Login con GitHub                               | Da fare  |
-| 4      | Dati e repository                              | Da fare  |
-| 5      | Il contributo dell'utente                      | Da fare  |
-| 6      | L'AI: la prima bozza                           | Da fare  |
-| 7      | Editor e pubblicazione                         | Da fare  |
-| 8      | Qualità: test e CI                             | Da fare  |
-| 9      | Valutazione e produzione                       | Da fare  |
-| 10     | Portfolio e colloqui                           | Da fare  |
-
 ## Architettura
 
 [DA COMPLETARE] Come è organizzato il codice e perché. Un diagramma semplice aiuta molto.
