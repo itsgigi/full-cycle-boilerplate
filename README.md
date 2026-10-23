@@ -94,11 +94,11 @@ Ogni modifica passa da un ticket, un branch e una pull request con code review. 
 
 ## Dove sbaglia e perché
 
-[DA COMPLETARE dallo sprint 6] Esempi di bozze sbagliate dell'AI e la loro causa.
+[DA COMPLETARE] Esempi di bozze sbagliate dell'AI e la loro causa.
 
 ## Cosa ho imparato
 
-[DA COMPLETARE nello sprint 10] 3–5 punti concreti. È la sezione da cui partono le domande nei colloqui.
+[DA COMPLETARE] 3–5 punti concreti. È la sezione da cui partono le domande nei colloqui.
 
 ---
 
