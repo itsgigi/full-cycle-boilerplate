@@ -20,16 +20,18 @@ export default function RepoList() {
   if (repos.length === 0) return <p>Nessuna repository trovata.</p>;
 
   return (
-    <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <ul className="grid gap-4 sm:grid-cols-2">
       {repos.map((repo) => (
         <li key={repo.id} className="rounded-xl bg-white p-5">
           <div className="flex justify-between text-black">
             <h2 className="text-lg font-semibold">{repo.name}</h2>
-            <span>{"⭐".repeat(Math.min(repo.stars ?? 0, 5))}</span>
+            <span className="text-sm">
+              {repo.stars ?? 0} {"⭐".repeat(Math.min(repo.stars ?? 0, 5))}
+            </span>
           </div>
-          <p className="text-gray-600">{repo.description}</p>
+          <p className="text-sm text-gray-600">{repo.description}</p>
 
-          <div className="mt-2 flex justify-between gap-3 text-sm text-black">
+          <div className="mt-2 text-sm text-black">
             {repo.language && (
               <span className="rounded-full bg-gray-300 px-2 py-0.5">{repo.language}</span>
             )}
