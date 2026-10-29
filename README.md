@@ -46,6 +46,10 @@ e2e/            test end-to-end
 docs/adr/       decisioni tecniche
 ```
 
+## RLS
+
+RLS (Row Level Security) è una regola del database che decide quali righe di una tabella ogni utente può leggere o modificare. Rende sicuro usare la anon key nel frontend, perché anche se la chiave è pubblica, l’accesso ai dati lo controllano le policy RLS.
+
 ## Decisioni tecniche
 
 Le scelte importanti sono documentate in [`docs/adr`](docs/adr): cosa si è deciso, quali alternative c'erano e perché.
