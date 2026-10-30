@@ -3,8 +3,17 @@
 import { useEffect, useState } from "react";
 import { getRepositoriesWithCaseStudies } from "@/lib/repositories";
 
+interface Repo {
+  id: number | string;
+  name: string;
+  description: string | null;
+  stars?: number;
+  language?: string | null;
+  url?: string | null;
+}
+
 export default function RepoList() {
-  const [repos, setRepos] = useState<any[]>([]);
+  const [repos, setRepos] = useState<Repo[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
