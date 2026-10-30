@@ -33,21 +33,6 @@ Chi lavora su progetti di gruppo (all'ITS, in un bootcamp, in tirocinio) ha diff
 - Vitest e Testing Library per i test unitari, Playwright per i test end-to-end
 - GitHub Actions per la CI, Vercel per il deploy
 
-## Stato del progetto
-
-| Sprint | Obiettivo                                      | Stato    |
-| ------ | ---------------------------------------------- | -------- |
-| 1      | Fondamenta, design system, home e primo deploy | In corso |
-| 2      | Primo caso studio scritto a mano               | Da fare  |
-| 3      | Login con GitHub                               | Da fare  |
-| 4      | Dati e repository                              | Da fare  |
-| 5      | Il contributo dell'utente                      | Da fare  |
-| 6      | L'AI: la prima bozza                           | Da fare  |
-| 7      | Editor e pubblicazione                         | Da fare  |
-| 8      | Qualità: test e CI                             | Da fare  |
-| 9      | Valutazione e produzione                       | Da fare  |
-| 10     | Portfolio e colloqui                           | Da fare  |
-
 ## Architettura
 
 [DA COMPLETARE] Come è organizzato il codice e perché. Un diagramma semplice aiuta molto.
@@ -60,6 +45,10 @@ src/
 e2e/            test end-to-end
 docs/adr/       decisioni tecniche
 ```
+
+## RLS
+
+RLS (Row Level Security) è una regola del database che decide quali righe di una tabella ogni utente può leggere o modificare. Rende sicuro usare la anon key nel frontend, perché anche se la chiave è pubblica, l’accesso ai dati lo controllano le policy RLS.
 
 ## Decisioni tecniche
 
@@ -94,11 +83,11 @@ Ogni modifica passa da un ticket, un branch e una pull request con code review. 
 
 ## Dove sbaglia e perché
 
-[DA COMPLETARE dallo sprint 6] Esempi di bozze sbagliate dell'AI e la loro causa.
+[DA COMPLETARE] Esempi di bozze sbagliate dell'AI e la loro causa.
 
 ## Cosa ho imparato
 
-[DA COMPLETARE nello sprint 10] 3–5 punti concreti. È la sezione da cui partono le domande nei colloqui.
+[DA COMPLETARE] 3–5 punti concreti. È la sezione da cui partono le domande nei colloqui.
 
 ---
 
