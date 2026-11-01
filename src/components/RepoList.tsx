@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import { getRepositoriesWithCaseStudies } from "@/lib/repositories";
 
 interface Repo {
@@ -12,21 +9,12 @@ interface Repo {
   url?: string | null;
 }
 
-export default function RepoList() {
-  const [repos, setRepos] = useState<Repo[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+export default async function RepoList() {
+  const repos: Repo[] = await getRepositoriesWithCaseStudies();
 
-  useEffect(() => {
-    getRepositoriesWithCaseStudies()
-      .then(setRepos)
-      .catch((e) => setError(e.message))
-      .finally(() => setLoading(false));
-  }, []);
-
-  if (loading) return <p>Caricamento...</p>;
-  if (error) return <p>Errore: {error}</p>;
-  if (repos.length === 0) return <p>Nessuna repository trovata.</p>;
+  if (repos.length === 0) {
+    return <p>Nessuna repository trovata.</p>;
+  }
 
   return (
     <ul className="grid gap-4 sm:grid-cols-2">
@@ -38,20 +26,21 @@ export default function RepoList() {
               {repo.stars ?? 0} {"⭐".repeat(Math.min(repo.stars ?? 0, 5))}
             </span>
           </div>
+
           <p className="text-sm text-gray-600">{repo.description}</p>
 
-          <div className="mt-2 text-sm text-black">
-            {repo.language && (
-              <span className="rounded-full bg-gray-300 px-2 py-0.5">{repo.language}</span>
-            )}
-          </div>
+          {repo.language && (
+            <span className="mt-2 inline-block rounded-full bg-gray-300 px-2 py-0.5 text-sm text-black">
+              {repo.language}
+            </span>
+          )}
 
           {repo.url && (
             <a
               href={repo.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-bold mt-4 inline-block text-black hover:underline"
+              className="mt-4 block font-bold text-black hover:underline"
             >
               Apri su GitHub
             </a>
