@@ -5,6 +5,6 @@ export async function getRepositoriesWithCaseStudies() {
     .from("repositories")
     .select("id, name, description, stars, language, url");
 
-  if (error) throw error;
+  if (error) throw new Error(error.message);
   return data ?? [];
 }
