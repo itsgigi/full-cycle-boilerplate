@@ -1,4 +1,6 @@
 import { siteConfig } from "@/lib/site";
+import RepoList from "@/components/RepoList";
+import { Suspense } from "react";
 
 // Sprint 1, ticket «Home del portfolio»: sostituisci questo contenuto con la tua home.
 export default function HomePage() {
@@ -10,6 +12,9 @@ export default function HomePage() {
         Questo è il punto di partenza. Apri la board del progetto su GitHub e prendi il primo
         ticket.
       </p>
+      <Suspense fallback={<p>Caricamento delle repository...</p>}>
+        <RepoList />
+      </Suspense>
     </main>
   );
 }
