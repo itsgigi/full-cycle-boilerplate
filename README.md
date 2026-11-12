@@ -7,7 +7,7 @@
 
 > Trasforma i progetti a cui hai contribuito in casi studio pronti per il tuo portfolio.
 
-**Sito live:** [DA COMPLETARE dopo il primo deploy] · ![CI](https://github.com/OWNER/case-study-builder/actions/workflows/ci.yml/badge.svg)
+**Sito live:** https://full-cycle-boilerplate-aewf.vercel.app/ · ![CI](https://github.com/OWNER/case-study-builder/actions/workflows/ci.yml/badge.svg)
 
 <!-- Nome provvisorio: il nome definitivo si sceglie al kickoff. -->
 
